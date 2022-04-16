@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+:root{
+    --color-main:#273c75;
+}
+.container{
+    width: 100%;
+}
+
+
+/* Header */
+.container header{
+    background: var(--color-main);
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+.container nav .menu{
+    text-align: center;
+}
+.container nav .menu ul li{
+    display: inline-table;
+}
+.container nav .menu ul li a{
+    text-decoration: none;
+    color: var(--color-main);
+    display: block;
+    padding: 10px 20px;
+}
+.container nav .menu ul li a:hover{
+    color: #487eb0;
+}
+.container .banner{
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 300px;
+    background-image: url(img/anhnen.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Content */
+.content,footer{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.content .header{
+    padding: 10px 0;
+    text-align: center;
+}
+.content .left,.right,.posts{
+    float: left;
+    padding: 10px;
+    margin: 10px 1%;
+    border: 1px solid var(--color-main);
+    box-sizing: border-box;
+}
+.content h3{
+    padding-bottom: 20px;
+}
+.content .left{
+    width: 63%;
+}
+.content .left .left-left{
+    width: 35%;
+    float: left;
+}
+.content .left .left-right{
+    width: 65%;
+    float: left;
+}
+.content .left .interests{
+    width: 100%;
+    clear: both;
+}
+.content .left .interests h4,.content .items .item p{
+    text-align: center;
+    margin: 10px 0;
+}
+.content .left .interests .interests-items{
+    padding: 10px 0;
+    border: 1px solid var(--color-main);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+.content .left .interests .interests-items .interests-item{
+    width: 20%;
+}
+.content .left .interests .items{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.content .left .interests .items .item{
+    width: 31.33%;
+    background: #e67e22;
+    margin: 10px 1%;
+}
+.content .left .interests .items .item a{
+    text-decoration: none;
+    color: var(--color-main);
+}
+.content .left .interests .items .item .thumnail{
+    line-height: 1%;
+    overflow: hidden;
+}
+.content .left .interests .items .item:hover .thumnail img{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.content .left .photo-items .photo-left,.photo-right{
+    float: left;
+    overflow: hidden;
+    line-height: 1%;
+    box-sizing: border-box;
+}
+.content .left .photo-items .photo-left{
+    width: 66%;
+    padding: 2px;
+}
+.content .left .photo-items .photo-right{
+    width: 32.85%;
+}
+.content .left .photo-items .photo-right img{
+    margin-bottom: 2px;
+}
+.content .left .photo-items img:hover{
+    transform: scale(1.1);
+    opacity: 0.9;
+    transition: 1s;
+}
+.content .right,.posts{
+    width: 33%;
+}
+.content .posts .posts-item{
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    background: var(--color-main);
+}
+.content .posts .posts-item img,.text{
+    float: left;
+}
+.content .posts .posts-item .text,footer p{
+    color: white;
+    padding: 20px 0;
+}
+button{
+    border: none;
+    background: var(--color-main);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+button:hover{
+    background: linear-gradient(90deg,var(--color-main),red);
+}
+
+#up-top{
+    position: fixed;
+    bottom: 20px;
+    left: 85%;
+    z-index: 100;
+    animation: top 0.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.1s;
+}
+
+
+/* Footer */
+footer{
+    height: 300px;
+    clear: both;
+    background: var(--color-main);
+}
+
+
+
+/* Responsive */
+@media screen and (max-width:767px){
+    .content .left{
+        width: 98%;
+        margin: 10px 1%;
+        clear: both;
+    }
+    .content .right,.posts{
+        width: 98%;
+        margin: 10px 1%;
+        clear: both;
+    }
+    .content .left .interests .items .item{
+        width: 48%;
+    }
+}
+
+
+/* Animation */
+@keyframes top {
+    0%{
+        bottom: 20px;
+    }
+    100%{
+        bottom: 30px;
+    }
+}
